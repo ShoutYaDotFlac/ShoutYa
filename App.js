@@ -50,6 +50,7 @@ class HomeScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <Content >
+                    <Text>This is Josh's edit</Text>
                     <Thumbnail large source={{uri: imagesUri[0]}}/>
                     <Thumbnail large source={{uri: imagesUri[1]}}/>
                     <Thumbnail large source={{uri: imagesUri[2]}}/>
