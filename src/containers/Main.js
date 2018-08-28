@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput , Image} from 'react-native';
 import HomeScreen from './HomeScreen.js';
-import Main from './Mates.js';
+import Mates from './Mates.js';
 import Friend from './Friend.js';
 
 /*React Navigator*/
