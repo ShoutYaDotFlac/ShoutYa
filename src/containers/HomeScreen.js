@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text, View, TextInput , Image} from 'react-native';
 
 export default class HomeScreen extends React.Component {
     constructor(props){
