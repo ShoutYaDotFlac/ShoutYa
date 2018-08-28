@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput , Image} from 'react-native';
 
 /*React Navigator*/
-import { createStackNavigator } from 'react-navigation';
+// import { createStackNavigator } from 'react-navigation';
 /*End of React Navigator*/
 
 import { Thumbnail, Button, Icon, Fab, Footer, FooterTab, Content, Header } from 'native-base';
@@ -70,23 +70,6 @@ class HomeScreen extends React.Component {
 
                 </Content>
 
-                {/*<Footer>*/}
-                {/*<FooterTab>*/}
-                {/*<Button>*/}
-                {/*<Text>Apps</Text>*/}
-                {/*</Button>*/}
-                {/*<Button>*/}
-                {/*<Text>Camera</Text>*/}
-                {/*</Button>*/}
-                {/*<Button active>*/}
-                {/*<Text>Navigate</Text>*/}
-                {/*</Button>*/}
-                {/*<Button>*/}
-                {/*<Text>Contact</Text>*/}
-                {/*</Button>*/}
-                {/*</FooterTab>*/}
-                {/*</Footer>*/}
-
                 <Fab
                     active={this.state.active}
                     direction="up"
@@ -112,19 +95,19 @@ class HomeScreen extends React.Component {
     }
 }
 
-const RootStack = createStackNavigator(
-    {
-        Home: HomeScreen,
-    },
-    {
-        initialRouteName: 'Home',
-    }
-);
+// const RootStack = createStackNavigator(
+//     {
+//         Home: HomeScreen,
+//     },
+//     {
+//         initialRouteName: 'Home',
+//     }
+// );
 
-export default class App extends React.Component {
+export default class Main extends React.Component {
     render() {
         return (
-            <RootStack/>
+            <HomeScreen/>
         );
     }
 }
