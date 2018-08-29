@@ -1,12 +1,23 @@
 import React from 'react';
-import { Text, View, TextInput, Image, Thumbnail, StyleSheet, Button} from 'react-native';
+import { Text, View, TextInput, Image, Thumbnail, StyleSheet, Button } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'lightblue',
         alignItems: 'center',
         justifyContent: 'center',
-        minWidth: 200
+        padding: 50,
+    },
+    h1: {
+        fontSize: 30,
+        borderRadius: 4,
+        borderWidth: 1,
+        borderColor: 'blue',
+        padding: 10,
+    },
+    h2: {
+        fontSize: 28,
+        textAlign: 'center',
+        margin: 20
     }
 });
 
@@ -14,8 +25,9 @@ const styles = StyleSheet.create({
 export default class HomeScreen extends React.Component {
     render() {
         return (
-            <View>
-                <Text>HomeScreen</Text>
+            <View style={styles.container}>
+                <Text style={styles.h1}>Home Screen</Text>
+                <Text style={styles.h2}>Welcome to ShoutYa! The best place to show your friends who's turn it is to shout this time</Text>
             </View>
         );
     }
