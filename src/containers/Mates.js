@@ -1,10 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 export default class Mates extends React.Component {
     render() {
         return (
-            <View>Mate Container</View>
+            <View>
+                <Text>Mate Container</Text>
+            </View>
         );
     }
 }

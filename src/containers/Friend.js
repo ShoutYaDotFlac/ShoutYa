@@ -1,10 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 export default class Friend extends React.Component {
     render() {
         return (
-            <View>Friend Container</View>
+            <View>
+                <Text>Friend Container</Text>
+            </View>
         );
     }
 }
