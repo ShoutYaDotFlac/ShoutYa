@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View, TextInput, Image, Thumbnail, StyleSheet, Button } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
+import { Header } from 'native-base';
 
 const styles = StyleSheet.create({
     container: {
@@ -13,6 +14,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'blue',
         padding: 10,
+        textAlign: 'center'
     },
     h2: {
         fontSize: 28,

@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, Dimensions } from 'react-native';
-import { Container, Content } from 'native-base';
+import { Container, Content, Header, Left, Right, Body, Title } from 'native-base';
 
 import HomeScreen from './HomeScreen.js';
 import Mates from './Mates.js';
 import Friend from './Friend.js';
 
-var { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     view: {
@@ -14,12 +14,6 @@ const styles = StyleSheet.create({
         width: width,
         height: height + 50,
         borderRadius: 10,
-    },
-    blue: {
-        backgroundColor: 'lightblue'
-    },
-    yellow: {
-        backgroundColor: 'lightyellow'
     }
 });
 
@@ -27,6 +21,13 @@ export default class Main extends React.Component {
     render() {
         return (
             <Container style={{ alignContent: 'center' }}>
+                <Header>
+                    <Left />
+                    <Body>
+                        <Text style={{ color: 'white', fontSize: 30 }}>ShoutYa</Text>
+                    </Body>
+                    <Right />
+                </Header>
                 <ScrollView
                     ref={(scrollView) => { this.scrollView = scrollView; }}
                     pagingEnabled={true}
@@ -39,9 +40,8 @@ export default class Main extends React.Component {
                         bottom: 0,
                         right: 30,
                     }}>
-                    <View style={[styles.view, styles.blue]}><HomeScreen /></View>
-                    <View style={[styles.view, styles.yellow]}><Friend /></View>
-                    <View style={[styles.view, styles.blue]}><Mates /></View>
+                    <View style={[styles.view, { backgroundColor: 'lightblue' }]}><Mates /></View>
+                    <View style={[styles.view, { backgroundColor: 'lightyellow' }]}><HomeScreen /></View>
                 </ScrollView>
             </Container>
         );
