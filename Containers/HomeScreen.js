@@ -29,7 +29,7 @@ class HomeScreen extends React.Component {
           </TouchableOpacity>
           <Button onPress={this.props.onProfilePress} title="Profile" />
       </ScrollView>
-    )
+    );
   }
 }
 
