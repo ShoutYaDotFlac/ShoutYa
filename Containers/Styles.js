@@ -21,10 +21,8 @@ export const Styles = StyleSheet.create({
     margin: 25
   },
   button: {
-    style={{
       backgroundColor: 'green',
       width: '40%',
       height: 40
-    }}
   }
 });
