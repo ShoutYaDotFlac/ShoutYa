@@ -4,16 +4,16 @@ import Login from './Containers/Login';
 import Secured from './Containers/Secured';
 
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
-    super(props);``
+    super(props);
     this.state = {
       isLoggedIn: false
     }
   }
 
 	render() {
-  if (this.state.isLoggedIn)  
+    if (this.state.isLoggedIn)
       return <Secured
           onLogoutPress={() => this.setState({isLoggedIn: false})}
         />;
@@ -23,5 +23,7 @@ export default class App extends React.Component {
         />;
 	} //end of render
 } //end of class
+
+export default App;
 
 AppRegistry.registerComponent(App , () => App);

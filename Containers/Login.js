@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import {ScrollView, Text, TextInput, View, Button} from "react-native";
+import OpenShifts from './OpenShifts';
 
-export default class Login extends React.Component {
+class Login extends React.Component {
 	render() {
 		return (
 			<ScrollView style={{padding: 20}}>
@@ -10,7 +11,11 @@ export default class Login extends React.Component {
 				<TextInput placeholder="Password" />
 				<View style={{margin: 7}} />
 				<Button onPress={this.props.onLoginPress} title="Submit" />
+
+
 			</ScrollView>
 		);
 	}
 }
+
+export default Login;

@@ -6,14 +6,14 @@ import {
     View
 } from 'react-native';
 
-export default class Settings extends React.Component {
+class Settings extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
             <ScrollView style={{padding: 20}}>
-                <Text 
+                <Text
                     style={{fontSize: 27}}>
                     Setting
                 </Text>
@@ -23,3 +23,5 @@ export default class Settings extends React.Component {
         )
     }
 }
+
+export default Settings;
