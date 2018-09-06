@@ -3,9 +3,28 @@ import { StyleSheet } from 'react-native';
 
 export const Styles = StyleSheet.create({
   closeBanner: {
-    backgroundColor: 'red'
+    backgroundColor: 'red',
+    height:35,
+    width:400,
+    marginTop: 15
   },
-  swapShiftBanner: {
-    backgroundColor: 'green'
+  openShiftBanner: {
+    backgroundColor: 'powderblue',
+    height:35,
+    width:400
+  },
+  modal: {
+    zIndex: 1,
+    borderRadius: 2,
+    borderWidth: 1,
+    padding: 5,
+    margin: 25
+  },
+  button: {
+    style={{
+      backgroundColor: 'green',
+      width: '40%',
+      height: 40
+    }}
   }
 });
