@@ -41,7 +41,7 @@ class Secured extends React.Component {
 				return (
 
 					<ScrollView style={{padding: 20}}>
-						<Header/>
+						<Header onOSPRess={this.viewOpenShift}/>
 						<HomeScreen onProfilePress={this.viewUserProfile} showDetails={this.viewShiftDetails} />
 					</ScrollView>
 				);
@@ -50,7 +50,7 @@ class Secured extends React.Component {
 				return (
 
 					<ScrollView style={{padding: 20}}>
-						<Header/>
+						<Header onOSPRess={this.viewOpenShift}/>
 						<Text style={{fontSize: 27}}>User Profile</Text>
 						<UserProfile onHomePress={this.viewHomeScreen} onLogoutPress={this.props.onLogoutPress}/>
 					</ScrollView>
@@ -60,7 +60,7 @@ class Secured extends React.Component {
 				return (
 
 					<ScrollView>
-						<Header/>
+						<Header onOSPRess={this.viewOpenShift}/>
 						<ShiftDetailed onHomePress={this.viewHomeScreen}/>
 					</ScrollView>
 				)
@@ -69,7 +69,8 @@ class Secured extends React.Component {
       case 5: {
 				return (
 					<ScrollView>
-						<OpenShifts onHomePress={this.viewHomeScreen}/>
+            <Header onOSPRess={this.viewOpenShift}/>
+						<OpenShifts/>
 					</ScrollView>
 				)
 			}
