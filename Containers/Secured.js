@@ -7,20 +7,40 @@ export default class Secured extends React.Component {
 	constructor(props) {
     super(props);
     this.state = {
-      showShiftInfo: false
+      pageId: 0
     }
+		this.viewHomeScreen = this.viewHomeScreen.bind(this);
+		this.viewUserProfile = this.viewUserProfile.bind(this);
+		this.viewSettings = this.viewSettings.bind(this);
   }
 
+	viewHomeScreen() {
+		this.setState({pageId: 0});
+	}
+	viewUserProfile() {
+		this.setState({pageId: 1});
+	}
+	viewSettings() {
+		this.setState({pageId: 2});
+	}
+
 	render() {
-		return (
-			<ScrollView style={{padding: 20}}>
-				<Text style={{fontSize: 27}}>Welcome</Text>
-				<View style={{margin: 20}} />
-        <HomeScreen />
-				<UserProfile />
-				<Button onPress={() => this.setState({showShiftInfo: true})} title="Shift Info Modal"/>
-				<Button onPress={this.props.onLogoutPress} title="Logout" />
-			</ScrollView>
-		);
+		switch (this.state.pageId) {
+			case 0: {
+				return (
+					<ScrollView style={{padding: 20}}>
+						<HomeScreen onProfilePress={this.viewUserProfile}/>
+					</ScrollView>
+				);
+			}
+			case 1: {
+				return (
+					<ScrollView style={{padding: 20}}>
+						<Text style={{fontSize: 27}}>User Profile</Text>
+						<UserProfile onHomePress={this.viewHomeScreen} onLogoutPress={this.props.onLogoutPress}/>
+					</ScrollView>
+				);
+			}
+		}
 	}
 }

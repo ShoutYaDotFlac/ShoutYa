@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 
 export default class Login extends React.Component {
-
     render() {
         return (
             <ScrollView style={{padding: 20}}>

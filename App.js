@@ -6,14 +6,14 @@ import Secured from './Containers/Secured';
 
 export default class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props);``
     this.state = {
       isLoggedIn: false
     }
   }
 
 	render() {
-    if (this.state.isLoggedIn)
+  if (this.state.isLoggedIn)  
       return <Secured
           onLogoutPress={() => this.setState({isLoggedIn: false})}
         />;
