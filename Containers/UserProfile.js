@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { View, Text, ScrollView, Button, Image } from 'react-native';
 
-export default class UserProfile extends React.Component {
+class UserProfile extends React.Component {
   render() {
     return (
       <View>
@@ -14,3 +14,5 @@ export default class UserProfile extends React.Component {
     );
   }
 }
+
+export default UserProfile;

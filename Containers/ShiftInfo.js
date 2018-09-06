@@ -3,7 +3,7 @@ import {View, ScrollView, Text, Button} from 'react-native';
 import { Styles } from './Styles.js';
 import ShiftDetailed from './ShiftDetailed';
 
-export default class ShiftInfo extends React.Component{
+class ShiftInfo extends React.Component{
   constructor(props){
     super(props);
 
@@ -26,12 +26,10 @@ export default class ShiftInfo extends React.Component{
       <View>
         <View style={{borderColor: 'black', padding: 5}}>
           <Text>{this.getShiftInfo()}</Text>
-          <Button title="Take Shift" onPress={this.props.showDetails}/>
-        {/*  {this.state.showDetails && (
-            <ShiftDetailed/>
-          )} */}
         </View>
       </View>
     );
   }
 }
+
+export default ShiftInfo;

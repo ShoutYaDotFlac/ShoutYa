@@ -4,7 +4,7 @@ import Login from './Containers/Login';
 import Secured from './Containers/Secured';
 
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,5 +23,7 @@ export default class App extends React.Component {
         />;
 	} //end of render
 } //end of class
+
+export default App;
 
 AppRegistry.registerComponent(App , () => App);

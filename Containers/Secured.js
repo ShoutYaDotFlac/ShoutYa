@@ -4,7 +4,7 @@ import HomeScreen from './HomeScreen.js';
 import ShiftDetailed from './ShiftDetailed.js';
 import UserProfile from './UserProfile.js';
 
-export default class Secured extends React.Component {
+class Secured extends React.Component {
 	constructor(props) {
     super(props);
     this.state = {
@@ -56,3 +56,5 @@ export default class Secured extends React.Component {
 		}
 	}
 }
+
+export default Secured;

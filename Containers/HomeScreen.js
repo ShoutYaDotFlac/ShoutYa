@@ -4,7 +4,7 @@ import MyCalendar from './MyCalendar';
 import ShiftInfo from './ShiftInfo';
 
 
-export default class HomeScreen extends React.Component {
+class HomeScreen extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -32,3 +32,5 @@ export default class HomeScreen extends React.Component {
     )
   }
 }
+
+export default HomeScreen;
