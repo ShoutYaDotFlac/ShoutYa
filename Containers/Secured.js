@@ -69,10 +69,10 @@ class Secured extends React.Component {
 
       case 5: {
 				return (
-					<ScrollView>
+					<View>
             <Header onOSPress={this.viewOpenShifts} onProfilePress={this.viewUserProfile}/>
-						<OpenShifts/>
-					</ScrollView>
+						<ScrollView><OpenShifts/></ScrollView>
+					</View>
 				)
 			}
 		}
