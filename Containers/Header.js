@@ -19,8 +19,8 @@ class HeaderBanner extends React.Component {
         <Text>
           Open Shift
         </Text>
-        <Button onPress= {this.props.onOSPRess} Title="More"></Button>
-        
+        <Button onPress= {this.props.onOSPress} title="More"></Button>
+
       </View>
     );
   }
