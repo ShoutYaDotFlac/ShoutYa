@@ -41,8 +41,8 @@ class ShiftDetailed extends React.Component{
                   flexDirection: 'row',
                   justifyContent: 'space-between'
                 }}>
-                <Button onPress={this.props.onShiftDetailedPress} title="Yes" style={Styles.button}></Button>
-                <Button onPress={this.props.onShiftDetailedPress} title="No" style={Styles.button}></Button>
+                <Button onPress={this.props.onShiftDetailedPress} title="Yes" style={Styles.button}/>
+                <Button onPress={this.props.onShiftDetailedPress} title="No" style={Styles.button}/>
               </View>
             </View>
           )}
