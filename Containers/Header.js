@@ -15,12 +15,11 @@ class HeaderBanner extends React.Component {
           flexDirection: 'row',
           justifyContent: 'space-between'
         }}>
-        <Button title="Gear"></Button>
+        <Button title="Gear" onPress={this.props.onOSPress}></Button>
         <Text>
           Open Shift
         </Text>
-        <Button onPress= {this.props.onOSPress} title="More"></Button>
-
+        <Button title="More" onPress={this.props.onOSPress}></Button>
       </View>
     );
   }
