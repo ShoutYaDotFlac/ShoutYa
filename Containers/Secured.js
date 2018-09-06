@@ -65,22 +65,21 @@ class Secured extends React.Component {
             }
             case 3: {
                 return (
-
-                    <ScrollView>
+                    <View>
                         <Header onOSPress={this.viewOpenShifts} onProfilePress={this.viewUserProfile}
                                 onHomePress={this.viewHomeScreen}/>
                         <ShiftDetailed onHomePress={this.viewHomeScreen}/>
-                    </ScrollView>
+                    </View>
                 )
             }
 
             case 5: {
                 return (
-                    <ScrollView>
+                    <View>
                         <Header onOSPress={this.viewOpenShifts} onProfilePress={this.viewUserProfile}
                                 onHomePress={this.viewHomeScreen}/>
                         <OpenShifts/>
-                    </ScrollView>
+                    </View>
                 )
             }
         }
