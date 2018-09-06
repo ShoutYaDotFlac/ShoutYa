@@ -18,40 +18,38 @@ export default class MyCalendar extends React.Component {
 				renderItem={this.renderItem.bind(this)}
 				renderEmptyDate={this.renderEmptyDate.bind(this)}
 				rowHasChanged={this.rowHasChanged.bind(this)}
-				// markingType={'period'}
-				// markedDates={{
-				//    '2017-05-08': {textColor: '#666'},
-				//    '2017-05-09': {textColor: '#666'},
-				//    '2017-05-14': {startingDay: true, endingDay: true, color: 'blue'},
-				//    '2017-05-21': {startingDay: true, color: 'blue'},
-				//    '2017-05-22': {endingDay: true, color: 'gray'},
-				//    '2017-05-24': {startingDay: true, color: 'gray'},
-				//    '2017-05-25': {color: 'gray'},
-				//    '2017-05-26': {endingDay: true, color: 'gray'}}}
-				// monthFormat={'yyyy'}
-				// theme={{calendarBackground: 'red', agendaKnobColor: 'green'}}
-				//renderDay={(day, item) => (<Text>{day ? day.day: 'item'}</Text>)}
+        pastScrollRange={0}
+        futureScrollRange={0}
 			/>
 		);
 	}
 
 	loadItems(day) {
 		setTimeout(() => {
-			for (let i = -15; i < 85; i++) {
+			for (let i = 0; i < 2; i++) {
 				const time = day.timestamp + i * 24 * 60 * 60 * 1000;
 				const strTime = this.timeToString(time);
 				if (!this.state.items[strTime]) {
 					this.state.items[strTime] = [];
 					const numItems = Math.floor(Math.random() * 5);
 					for (let j = 0; j < numItems; j++) {
+            if (j%2===0){
+              var stringJob = "CATERING";
+              }else{
+               stringJob = "CLEANING"
+              }
+
 						this.state.items[strTime].push({
-							name: "Item for " + strTime,
+
+
+              name: "Job for " + strTime +'\n\n'+stringJob,
 							height: Math.max(50, Math.floor(Math.random() * 150))
 						});
 					}
 				}
 			}
-			//console.log(this.state.items);
+			console.log(this.state.items);
+
 			const newItems = {};
 			Object.keys(this.state.items).forEach(key => {
 				newItems[key] = this.state.items[key];
