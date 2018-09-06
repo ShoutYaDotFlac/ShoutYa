@@ -14,6 +14,7 @@ class Secured extends React.Component {
 		this.viewUserProfile = this.viewUserProfile.bind(this);
 		this.viewSettings = this.viewSettings.bind(this);
 		this.viewShiftDetails = this.viewShiftDetails.bind(this);
+    this.viewOpenShifts = this.viewOpenShifts.bind(this);
   }
 
 	viewHomeScreen() {
@@ -27,6 +28,9 @@ class Secured extends React.Component {
 	}
 	viewShiftDetails() {
 		this.setState({pageId: 3});
+	}
+  viewOpenShifts() {
+		this.setState({pageId: 5});
 	}
 
 	render() {
@@ -50,6 +54,14 @@ class Secured extends React.Component {
 				return (
 					<ScrollView>
 						<ShiftDetailed onHomePress={this.viewHomeScreen}/>
+					</ScrollView>
+				)
+			}
+
+      case 5: {
+				return (
+					<ScrollView>
+						<OpenShifts onHomePress={this.viewHomeScreen}/>
 					</ScrollView>
 				)
 			}

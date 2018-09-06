@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {ScrollView, Text, TextInput, View, Button} from "react-native";
+import OpenShifts from './OpenShifts';
 
 class Login extends React.Component {
 	render() {
@@ -12,7 +13,7 @@ class Login extends React.Component {
 				<Button onPress={this.props.onLoginPress} title="Submit" />
 
       <OpenShifts />
-      
+
 			</ScrollView>
 		);
 	}
