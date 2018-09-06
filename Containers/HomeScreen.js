@@ -25,7 +25,7 @@ export default class HomeScreen extends React.Component {
           <Text style={{fontSize: 30}}>Open Shift</Text>
           <Text>{this.state.selectedDay}</Text>
           <MyCalendar selectDay={this.selectDay}/>
-          <TouchableOpacity onPress={this.props.showDetails} onHomePress>
+          <TouchableOpacity onPress={this.props.showDetails}>
             <ShiftInfo date={this.state.selectedDay}/>
           </TouchableOpacity>
           <Button onPress={this.props.onProfilePress} title="Profile" />

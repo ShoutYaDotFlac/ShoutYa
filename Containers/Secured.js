@@ -34,7 +34,7 @@ export default class Secured extends React.Component {
 			case 0: {
 				return (
 					<ScrollView style={{padding: 20}}>
-						<HomeScreen onProfilePress={this.viewUserProfile} showDetails={this.viewShiftDetails} onHomePress={this.viewHomeScreen}/>
+						<HomeScreen onProfilePress={this.viewUserProfile} showDetails={this.viewShiftDetails} />
 					</ScrollView>
 				);
 			}
@@ -49,7 +49,7 @@ export default class Secured extends React.Component {
 			case 3: {
 				return (
 					<ScrollView>
-						<ShiftDetailed />
+						<ShiftDetailed onHomePress={this.viewHomeScreen}/>
 					</ScrollView>
 				)
 			}
