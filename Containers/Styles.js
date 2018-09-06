@@ -12,5 +12,19 @@ export const Styles = StyleSheet.create({
     backgroundColor: 'powderblue',
     height:35,
     width:400
+  },
+  modal: {
+    zIndex: 1,
+    borderRadius: 2,
+    borderWidth: 1,
+    padding: 5,
+    margin: 25
+  },
+  button: {
+    style={{
+      backgroundColor: 'green',
+      width: '40%',
+      height: 40
+    }}
   }
 });
