@@ -1,8 +1,9 @@
 import React, {Component} from "react";
-import {ScrollView, Text, View, Button, Header} from "react-native";
+import {ScrollView, Text, View, Button, HeaderBanner} from "react-native";
 import HomeScreen from './HomeScreen.js';
 import ShiftDetailed from './ShiftDetailed.js';
 import UserProfile from './UserProfile.js';
+import Header from './Header.js';
 
 class Secured extends React.Component {
 	constructor(props) {
@@ -30,17 +31,22 @@ class Secured extends React.Component {
 	}
 
 	render() {
+
 		switch (this.state.pageId) {
 			case 0: {
 				return (
+
 					<ScrollView style={{padding: 20}}>
+						<Header/>
 						<HomeScreen onProfilePress={this.viewUserProfile} showDetails={this.viewShiftDetails} />
 					</ScrollView>
 				);
 			}
 			case 1: {
 				return (
+
 					<ScrollView style={{padding: 20}}>
+						<Header/>
 						<Text style={{fontSize: 27}}>User Profile</Text>
 						<UserProfile onHomePress={this.viewHomeScreen} onLogoutPress={this.props.onLogoutPress}/>
 					</ScrollView>
@@ -48,7 +54,9 @@ class Secured extends React.Component {
 			}
 			case 3: {
 				return (
+
 					<ScrollView>
+						<Header/>
 						<ShiftDetailed onHomePress={this.viewHomeScreen}/>
 					</ScrollView>
 				)
