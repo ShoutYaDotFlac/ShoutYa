@@ -11,7 +11,8 @@ class Login extends React.Component {
 				<View style={{margin: 7}} />
 				<Button onPress={this.props.onLoginPress} title="Submit" />
 
-      // <OpenShifts />
+      {// <OpenShifts />
+      }
 			</ScrollView>
 		);
 	}
