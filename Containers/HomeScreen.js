@@ -27,7 +27,6 @@ class HomeScreen extends React.Component {
           <TouchableOpacity onPress={this.props.showDetails}>
             <ShiftInfo date={this.state.selectedDay}/>
           </TouchableOpacity>
-          <Button onPress={this.props.onProfilePress} title="Profile" />
       </ScrollView>
     );
   }

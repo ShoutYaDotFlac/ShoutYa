@@ -15,7 +15,7 @@ class HeaderBanner extends React.Component {
           flexDirection: 'row',
           justifyContent: 'space-between'
         }}>
-        <Button title="Gear" onPress={this.props.onOSPress}></Button>
+        <Button title="Gear" onPress={this.props.onProfilePress}></Button>
         <Text>
           Open Shift
         </Text>
