@@ -1,3 +1,14 @@
+#get up and Running
+* git clone https:ajdsasbfhbahfsbhabfja.git
+* git fetch
+* git pull
+* node -v (should be v10.9.0)
+* npm --version (should be 6.2.0)
+* npm install
+* (make sure watchman is installed, otherwise install version 4.9.0)
+* npm start
+
+
 # How to install and run
 https://facebook.github.io/react-native/docs/getting-started.html
 * type **"npm start"** in your terminal

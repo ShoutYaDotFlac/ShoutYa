@@ -1,44 +1,37 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {Component} from "react";
+import {AppRegistry, Text, TextInput, View} from "react-native";
+import Login from './Containers/Login';
+import Secured from './Containers/Secured';
+import AdminScreen from './Containers/Admin/AdminScreen';
 
-/*React Navigator*/
-import { createStackNavigator } from 'react-navigation';
-/*End of React Navigator*/
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoggedIn: false,
+            isAdmin: false
+        }
+    }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
-
-class HomeScreen extends React.Component {
     render() {
-        return (
-            <View style={styles.container}>
-                <Text>Open up App.js to start working on your app!</Text>
-                <Text>Changes you make will automatically reload.</Text>
-                <Text>Shake your phone to open the developer menu.</Text>
-            </View>
-        );
-    }
-}
+        if (this.state.isAdmin) {
+            return <AdminScreen
+                onLogoutPress={() => this.setState({isAdmin: false})}
+            />
+        }
 
-const RootStack = createStackNavigator(
-    {
-        Home: HomeScreen,
-    },
-    {
-        initialRouteName: 'Home',
-    }
-);
+        else if (this.state.isLoggedIn)
+            return <Secured
+                onLogoutPress={() => this.setState({isLoggedIn: false})}
+            />;
+        else
+            return <Login
+                onLoginPress={() => this.setState({isLoggedIn: true})}
+                onAdminPress={() => this.setState({isAdmin: true})}
+            />;
+    } //end of render
+} //end of class
 
-export default class App extends React.Component {
-    render() {
-        return (
-            <RootStack/>
-        );
-    }
-}
+export default App;
+
+AppRegistry.registerComponent(App, () => App);
