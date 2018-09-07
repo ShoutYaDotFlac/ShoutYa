@@ -8,7 +8,6 @@ class UserProfile extends React.Component {
         <Text style={{fontSize: 30}}>Michael Dao</Text>
         <Text>Professional cleaning lady</Text>
         <Image source={require("../res/duck.jpg")}/>
-        <Button onPress={this.props.onHomePress} title="Home" />
         <Button onPress={this.props.onLogoutPress} title="Logout" />
       </View>
     );

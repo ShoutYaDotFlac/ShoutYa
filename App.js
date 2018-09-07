@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {AppRegistry, Text, TextInput, View} from "react-native";
 import Login from './Containers/Login';
 import Secured from './Containers/Secured';
-import AdminScreen from './Containers/AdminScreen';
+import AdminScreen from './Containers/Admin/AdminScreen';
 
 class App extends React.Component {
     constructor(props) {

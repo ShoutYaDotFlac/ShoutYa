@@ -17,7 +17,7 @@ class HeaderBanner extends React.Component {
             }}>
 
                 <Icon reverse color='#517fa4' name='settings' onPress={this.props.onProfilePress}/>
-                
+
                 <Icon reverse color='#517fa4' name='home' onPress={this.props.onHomePress}/>
 
                 <Icon reverse color='#517fa4' name='control-point' onPress={this.props.onOSPress}/>
